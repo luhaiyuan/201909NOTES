@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jquery select2插件</title>
+	<link rel="stylesheet" type="text/css" href="./plugins/select2/css/select2.css">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<select id="mySelect01">
+      <option value="浙江省">浙江省</option>
+      <option value="天津市">天津市</option>
+      <option value="安徽省">安徽省</option>
+      <option value="上海市">上海市</option>
+      <option value="福建省">福建省</option>
+      <option value="重庆市">重庆市</option>
+      <option value="江西省">江西省</option>
+      <option value="山东省">山东省</option>
+      <option value="河南省">河南省</option>
+      <option value="湖北省">湖北省</option>
+      <option value="湖南省">湖南省</option>
+      <option value="广东省">广东省</option>
+      <option value="海南省">海南省</option>
+      <option value="山西省">山西省</option>
+      <option value="青海省">青海省</option>
+      <option value="江苏省">江苏省</option>
+      <option value="辽宁省">辽宁省</option>
+      <option value="吉林省">吉林省</option>
+      <option value="台湾省">台湾省</option>
+      <option value="河北省">河北省</option>
+      <option value="贵州省">贵州省</option>
+      <option value="四川省">四川省</option>
+      <option value="云南省">云南省</option>
+      <option value="陕西省">陕西省</option>
+      <option value="甘肃省">甘肃省</option>
+      <option value="黑龙江省">黑龙江省</option>
+      <option value="香港特别行政区">香港特别行政区</option>
+      <option value="澳门特别行政区">澳门特别行政区</option>
+      <option value="广西壮族自治区">广西壮族自治区</option>
+      <option value="宁夏回族自治区">宁夏回族自治区</option>
+      <option value="新疆维吾尔自治区">新疆维吾尔自治区</option>
+      <option value="内蒙古自治区">内蒙古自治区</option>
+      <option value="西藏自治区">西藏自治区</option>
+	</select>
+	<select id="mySelect02">
+		
+	</select>
+	<select id="mySelect03">
+		
+	</select>
+	<script src="jquery-3.4.1.js"></script>
+	<script src="./plugins/select2/js/select2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//调用插件
+			$("#mySelect01").select2({
+				width : 150
+			});
+			//调用插件
+			$("#mySelect02").select2({
+				width : 150,
+				data : [
+					{id:1,text:"小明"},
+					{id:2,text:"小强"},
+					{id:3,text:"小红"},
+					{id:4,text:"小方"},
+					{id:5,text:"小李"}
+				]
+			});
+			//调用插件
+			$("#mySelect03").select2({
+				width : 150,
+				 ajax: {
+				    url: 'https://api.github.com/search/repositories',
+				    dataType: 'json',
+				    processResults:function (data) {
+				    	//对响应内容进行处理
+				    	var resList = [];
+				    	$.each(data,function (index,item){
+				    		resList.push({id:item.id, text:item.name})
+				    	})
+				    	//返回结果
+				    	return {
+				    		results: resList
+				    	}
+				    }
+				 }
+			})
+		})
+	</script>
+</body>
+</html>

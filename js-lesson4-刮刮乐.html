@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			float: left;
+			width: 10px;
+			height: 10px;
+			box-sizing: border-box;
+			border: 1px solid black;
+			list-style: none;
+			border-bottom: 0;
+			border-right: 0;
+		}
+
+		ul{
+			content: "";
+			display: block;
+			clear: both;
+			width: 100px;
+			height: 100px;
+			border-bottom: 1px solid black;
+			border-right: 1px solid black; 
+
+		}
+	</style>
+
+</head>
+<body>
+	<ul>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+		<li img-date="0"></li>
+			
+	</ul>
+	<script type="text/javascript">
+		var ul = document.getElementsByTagName('ul')[0];
+		ul.onmouseover = function (e) {
+			var event = e || window.event;
+			var target = event.target || event.srcElement;
+			target.style.backgroundColor = "rgb(255,255," + target.getAttribute('img-date')+")";
+			target.setAttribute('img-date', parseInt(target.getAttribute('img-date')) + 10);
+		}
+	</script>
+</body>
+</html>
